@@ -1,5 +1,0 @@
-com\spring\data\SpringDataMainApplication.class
-com\spring\data\controller\UserController.class
-com\spring\data\entity\Customer.class
-com\spring\data\service\UserService.class
-com\spring\data\dao\UserRepository.class
