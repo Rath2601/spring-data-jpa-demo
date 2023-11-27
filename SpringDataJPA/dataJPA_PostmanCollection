@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "c473ec37-b19b-4cc8-a9ff-b0e95f228177",
+		"name": "REST_APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30991270"
+	},
+	"item": [
+		{
+			"name": "updateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 14,\r\n    \"fname\": \"sedhu\",\r\n    \"lname\": \"r s\",\r\n    \"email\": \"sedhu@sct.com\",\r\n    \"p_num\": 9798734638,\r\n    \"city\": \"Chennai\",\r\n    \"country\": \"India\",\r\n    \"dob\": \"2000-07-24\",\r\n    \"customerId\": 1009\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer?id=14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer?id=14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/?id=53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "53"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fname\": \"naveen\",\r\n    \"lname\": \"kumar\",\r\n    \"email\": \"naveen@sct.com\",\r\n    \"p_num\": 6847364382,\r\n    \"city\": \"Chennai\",\r\n    \"country\": \"India\",\r\n    \"dob\": \"2000-07-31\",\r\n    \"customerId\":1010\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCustomers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[ // Example 4\r\n    {\r\n        \"f_name\": \"emma\",\r\n        \"l_name\": \"johnson\",\r\n        \"email\": \"emma.johnson@example.com\",\r\n        \"p_num\": 1112233445,\r\n        \"city\": \"Paris\",\r\n        \"country\": \"France\",\r\n        \"dob\": \"1985-06-18\"\r\n    },\r\n    // Example 5\r\n    {\r\n        \"f_name\": \"michael\",\r\n        \"l_name\": \"brown\",\r\n        \"email\": \"michael.brown@example.com\",\r\n        \"p_num\": 9998887776,\r\n        \"city\": \"Berlin\",\r\n        \"country\": \"Germany\",\r\n        \"dob\": \"1977-12-03\"\r\n    },\r\n    // Example 6\r\n    {\r\n        \"f_name\": \"lily\",\r\n        \"l_name\": \"wang\",\r\n        \"email\": \"lily.wang@example.com\",\r\n        \"p_num\": 3334445557,\r\n        \"city\": \"Beijing\",\r\n        \"country\": \"China\",\r\n        \"dob\": \"1993-04-02\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerByCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/country/India",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"country",
+						"India"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerBydobGreater",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/dob/2000-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"dob",
+						"2000-01-01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerByIds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/Ids/1004,1002,1006",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"Ids",
+						"1004,1002,1006"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerByCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/city/New York",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"city",
+						"New York"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountriesList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/countriesList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"countriesList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerByFname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/fname/ka",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"fname",
+						"ka"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerdobbetween",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/dobbetween/1980-01-01/2000-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"dobbetween",
+						"1980-01-01",
+						"2000-01-01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query/city/{city}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/query/Chennai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"query",
+						"Chennai"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query/fname/{fname}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/query/Bharani",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"query",
+						"Bharani"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query/lname/{lname}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/query/lname/Bala",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"query",
+						"lname",
+						"Bala"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "native/country/{country}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/native/country/India",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"native",
+						"country",
+						"India"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
